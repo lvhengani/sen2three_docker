@@ -1,0 +1,15 @@
+version: '2'
+services:
+  sen2three:
+    build: 
+       context: ./dockerfile
+    environment:
+    - USERID=1000
+    env_file:
+    - variables.env
+    volumes:
+    - $unzipped_scenes:/var/temp/unzipped_scenes:rw  
+    environment:
+    - SEN2THREE_HOME=/root/sen2three
+    - SEN2THREE_BIN=/root/sen2three
+    working_dir: /var/temp/unzipped_scenes
