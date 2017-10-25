@@ -18,4 +18,3 @@ RUN apt-get update && \
     tar -xvzf ${SEN2THREE}.tar.gz && \
     cd ${SEN2THREE} && \
     /bin/echo -e "y\ny\ny\n" | python setup.py install
-    #rm -r  ${SEN2THREE}.tar.gz
