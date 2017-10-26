@@ -32,7 +32,7 @@ or
 ./l3process --help
 ~~~
 
-In the directory `~/Documents/s2_processing/temp_sen2three`, create a subdirectory. Preferably, use the UTM tileid of your sentinel-2 level-2A files to name your subdirectories  i.e `34HCH`. Place all the sen2cor pre-processed (Level-2A) scenes in the sub-directory. Run sen2three as shown below: 
+In the directory `~/Documents/s2_processing/temp_sen2three`, create a subdirectory. Preferably, use the UTM tileid of your sentinel-2 level-2A files to name your subdirectories  i.e `34HCH`. Place all the sen2cor pre-processed (Level-2A) scenes in the sub-directory, Please not that scenes must also be of the same UTM tileid, never mix adjacent scenes. Run sen2three as shown below: 
 
 ~~~
 ./l3process 34HCH --resolution 20
