@@ -1,16 +1,44 @@
 # SEN2THREE DOCKER
 
 This is a docker-container for running sen2three. Sen2Three generates level-3 sentinel 2 scenes from the level-2a scenes.
-The level-2a are generated with Sen2Cor. More information on sen2three can be found at [http://step.esa.int/main/third-party-plugins-2/sen2three/]. 
+The level-2a are generated with Sen2Cor. More information on sen2three can be found at [here](http://step.esa.int/main/third-party-plugins-2/sen2three/). 
 
-## Usage
+## Using the container
 
-Still under construction.
+Assuming that you have git installed on your PC, clone the repository into your local machine.
+
+~~~
+git clone git@github.com:lvhengani/sen2three_docker.git
+~~~
+
+Create a directory `~/Documents/s2_processing/temp_sen2three`. If you want to place the files elsewhere, edit the path in provided `.env` file.
+
+
+To build the image, run the command:
+
+~~~
+./build
+~~~
+
+To test if the build was successfull, run the command:
+
+~~~
+./l3process
+~~~
+
+or
 
 ~~~
 ./l3process -h
 ~~~
 
-## To Do List
-* Test with multiple level-2a scene
-* Intergrate with sentinel-2 burnt area processing chain.
+In the directory `~/Documents/s2_processing/temp_sen2three`, create a subdirectory. Preferably, use the UTM tileid of your snetinel-2 level-2A files to name your subdirectories  i.e `34HCH`. Place all the sen2cor pre-processed (Level-2A) scenes in the sub-directory. Run sen2three as shown below: 
+
+~~~
+./l3process 34HCH --resolution 20
+~~~
+
+## Known Issues
+
+* Still testing
+

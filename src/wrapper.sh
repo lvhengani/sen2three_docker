@@ -7,4 +7,6 @@ if [$1 == ""]; then
     exit 1
 fi
 
-L3_Process $@
+L3_Process "/var/temp/unzipped_scenes/$@"
+
+chown -R 1000 "/var/temp/unzipped_scenes/$1"
