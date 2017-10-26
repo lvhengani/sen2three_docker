@@ -38,6 +38,8 @@ In the directory `~/Documents/s2_processing/temp_sen2three`, create a subdirecto
 ./l3process 34HCH --resolution 20
 ~~~
 
+Always make sure that the name of your sub-directory i.e UTM tleid `34HCH` is the first commandline argument as shown above. More information on sen2three can be found at [here](http://step.esa.int/main/third-party-plugins-2/sen2three/).
+
 ## Known Issues
 
 * Still testing
